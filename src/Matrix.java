@@ -122,6 +122,16 @@ public class Matrix {
         return result;
     }
 
+    public Matrix transpose() {
+        Matrix transposeMatrix = new Matrix(height, width);
+        for (int i = 0; i < height; ++i) {
+            for (int j = 0; j < width; ++j) {
+                transposeMatrix.set(j, i, matrix[i][j]);
+            }
+        }
+        return transposeMatrix;
+    }
+
     public void set(int row, int column, Number value) {
         matrix[row][column] = value;
     }
